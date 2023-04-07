@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  get 'users/index'
   get 'houses/index'
   get 'reservations/index'
 end
