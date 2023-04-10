@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'reservations/index'
 
   resources :houses
+  post '/', to: 'houses#create'
 end
