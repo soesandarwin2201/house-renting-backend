@@ -24,12 +24,15 @@ default: &default
 development:
   <<: *default
   database: house_renting_backend_development
+  port: 5432
+  username: postgres
+  password: koko23052020
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: house_renting_backend
+  #username: hello_rails_backend
 
   # The password associated with the postgres role (username).
   #password:
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: house_renting_backend_test
+  port: 5432
+  username: postgres
+  password: koko23052020
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +88,6 @@ test:
 production:
   <<: *default
   database: house_renting_backend_production
-  username: house_renting_backend
-  password: <%= ENV["HOUSE_RENTING_BACKEND_DATABASE_PASSWORD"] %>
+  port: 5432
+  username: postgres
+  password: koko23052020
