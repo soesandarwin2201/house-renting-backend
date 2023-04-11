@@ -21,6 +21,16 @@ class HousesController < ApplicationController
         format.html { redirect_to @house, notice: 'Link was successfully created.' }
         format.json { render :show, status: :created, location: @house }
       else
+
+        format.html { redirect_to @house, notice: 'Link was       successfully created.' }
+
+         format.json { render :show, status: :created, location:  @house }
+      else
+         format.html { render :new }
+         format.json { render json: @house.errors, status: :unprocessable_entity }
+
+        format.json { render :show, status: :created, location: @house }
+      else
         format.html { render :new }
         format.json { render json: @house.errors, status: :unprocessable_entity }
       end
