@@ -21,7 +21,7 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.find(params[:id])
     if @reservations.update(reservation_params)
       render json: @reservations
-    else 
+    else
       render json: { error: @reservations.errors }, status: :unprocessable_entity
     end
   end
