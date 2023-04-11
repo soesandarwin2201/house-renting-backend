@@ -112,10 +112,13 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.14.2-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.14.2-x64-mingw32)
+      racc (~> 1.4)
     parallel (1.22.1)
     parser (3.2.2.0)
       ast (~> 2.4.1)
     pg (1.4.6-x64-mingw-ucrt)
+    pg (1.4.6-x64-mingw32)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -181,6 +184,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x64-mingw32
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
@@ -194,7 +198,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.2.1p31
+   ruby 3.0.5p211
 
 BUNDLED WITH
-   2.4.10
+   2.4.7
