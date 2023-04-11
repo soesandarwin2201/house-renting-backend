@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   get 'users/index'
-  get 'houses/index'
+  root 'houses#index'
   get 'reservations/index'
 
+
+  resources :houses
+  post '/', to: 'houses#create'
+
   resources :reservations 
+
 end
