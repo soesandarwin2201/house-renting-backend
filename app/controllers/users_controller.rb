@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorize_request, except: :create
-  before_action :find_user, except: %i[create, index, show]
+  before_action :find_user, except: %i[index, show]
 
   def index
     @users = User.all
@@ -12,12 +12,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name])
+    @user = User.new(user_params)
     if @user.save
       token = JsonWebToken.encode(user_id: @user.id)
       time = Time.now + 24.hours.to_i
       render json: { token: token, exp: time.strftime('%m-%d-%Y %H:%M'),
-                     username: @user }, status: :ok
+      user: @user }, status: :ok
     else
       render json: { errors: @user.errors.full_messages },
              status: :unprocessable_entity
@@ -25,9 +25,13 @@ class UsersController < ApplicationController
   end
 
   def find_user
-    @user = User.find_by_name!(params[:name])
+    @user = User.find_by(user_params)
     rescue ActiveRecord::RecordNotFound
       render json: { errors: 'User not found' }, status: :not_found
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password)
   end
 
 end
