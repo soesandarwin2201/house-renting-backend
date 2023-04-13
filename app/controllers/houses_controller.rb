@@ -10,7 +10,6 @@ class HousesController < ApplicationController
   end
 
   def create
-    puts "Current House: #{current_user.id}"
     @house = current_user.houses.build(house_params)
     if @house.save
       render json: @house, status: :ok
