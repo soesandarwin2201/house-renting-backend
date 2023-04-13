@@ -9,23 +9,15 @@ class HousesController < ApplicationController
     render json: @houses
   end
 
-  def new
-    @house = current_user.houses.build
-  end
 
   def create
-    @house = current_user.build(link_params)
-
-    respond_to do |format|
+    puts "Current House: #{current_user.id}"
+    @house = current_user.houses.build(house_params)
       if @house.save
-        format.html { redirect_to @house, notice: 'Link was successfully created.' }
+         render json: @house, status: :ok 
       else
-        format.html { render :new }
-        format.json { render json: @house.errors, status: :unprocessable_entity }
-
+         render json: @house.errors, status: :unprocessable_entity 
       end
-      format.json { render :show, status: :created, location: @house }
-    end
   end
 
   private

@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::API
-  def not_found
-    render json: { error: 'not_found' }
-  end
+
+  before_action :authorize_request
+  attr_reader :current_user
+
+  private 
 
   def authorize_request
     header = request.headers['Authorization']
@@ -9,7 +11,7 @@ class ApplicationController < ActionController::API
     begin
       @decoded = JsonWebToken.decode(header)
       @current_user = User.find(@decoded[:user_id])
-    rescue ActiveRecord::RecordNotFound => e
+     rescue JWT::DecodeError => e
       render json: { errors: e.message }, status: :unauthorized
     end
   end
