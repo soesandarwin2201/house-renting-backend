@@ -1,6 +1,6 @@
 class House < ApplicationRecord
   belongs_to :user
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
 
   validates_presence_of :name, :image, :price, :location, :description, :bedroom_number
   validates_numericality_of :price, message: 'Please enter the number'
