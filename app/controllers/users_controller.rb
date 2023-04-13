@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_action :authorize_request, except: :create
-  before_action :find_user, except: %i[index, show]
+  
 
   def index
-    @users = User.all
+    @users = current_user
     render json: @users
   end
 
@@ -24,11 +24,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def find_user
-    @user = User.find_by(user_params)
-    rescue ActiveRecord::RecordNotFound
-      render json: { errors: 'User not found' }, status: :not_found
-  end
 
   def user_params
     params.require(:user).permit(:name, :email, :password)

@@ -20,6 +20,11 @@ class HousesController < ApplicationController
       end
   end
 
+  def destroy
+    house = House.find(params[:id])
+    house.destroy
+end
+
   private
 
   def house_params

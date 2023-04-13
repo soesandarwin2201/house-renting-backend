@@ -1,15 +1,18 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = current_user.reservations
     render json: @reservations
   end
 
-  def show
-    @reservations = Reservation.find(params[:id])
-  end
-
   def create
+    if current_user.houses
+      @reservations = current_user.reservations.build(
+        params.require(:reservation).permit(:start_date, :end_date)
+        .merge(house_id: params[:house_id])
+      )
+    else 
     @reservations = current_user.reservations.build(reservation_params)
+    end
     if @reservations.save
       render json: @reservations, status: :created
     else
@@ -17,14 +20,10 @@ class ReservationsController < ApplicationController
     end
   end
 
-  def update
-    @reservations = Reservation.find(params[:id])
-    if @reservations.update(reservation_params)
-      render json: @reservations
-    else
-      render json: { error: @reservations.errors }, status: :unprocessable_entity
-    end
-  end
+  def destroy
+    reservation = Reservation.find(params[:id])
+    reservation.destroy
+end
 
   private
 
