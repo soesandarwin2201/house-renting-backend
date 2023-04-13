@@ -5,14 +5,14 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    if current_user.houses
-      @reservations = current_user.reservations.build(
-        params.require(:reservation).permit(:start_date, :end_date)
-        .merge(house_id: params[:house_id])
-      )
-    else 
-    @reservations = current_user.reservations.build(reservation_params)
-    end
+    @reservations = if current_user.houses
+                      current_user.reservations.build(
+                        params.require(:reservation).permit(:start_date, :end_date)
+                        .merge(house_id: params[:house_id])
+                      )
+                    else
+                      current_user.reservations.build(reservation_params)
+                    end
     if @reservations.save
       render json: @reservations, status: :created
     else
@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
   def destroy
     reservation = Reservation.find(params[:id])
     reservation.destroy
-end
+  end
 
   private
 

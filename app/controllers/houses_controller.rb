@@ -9,21 +9,20 @@ class HousesController < ApplicationController
     render json: @houses
   end
 
-
   def create
     puts "Current House: #{current_user.id}"
     @house = current_user.houses.build(house_params)
-      if @house.save
-         render json: @house, status: :ok 
-      else
-         render json: @house.errors, status: :unprocessable_entity 
-      end
+    if @house.save
+      render json: @house, status: :ok
+    else
+      render json: @house.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
     house = House.find(params[:id])
     house.destroy
-end
+  end
 
   private
 
