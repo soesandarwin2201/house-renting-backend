@@ -26,8 +26,7 @@ development:
   database: house_renting_backend_development
   port: 5432
   username: postgres
-  password: Fe@rLes$237
-
+  password: wolo
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -65,8 +64,7 @@ test:
   port: 5432
   username: postgres
 
-  password: Fe@rLes$237
-
+  password: wolo
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -93,4 +91,4 @@ production:
   database: house_renting_backend_production
   port: 5432
   username: postgres
-  password: nabeel
+  password: wolo
