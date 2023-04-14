@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
-ruby '3.0.5'
+ruby '3.2.1'
+gem 'rack-cors'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Use Json Web Token (JWT) for token based authentication
 gem 'jwt'
