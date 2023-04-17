@@ -97,6 +97,7 @@ To run the project, execute the following command:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
 
 👤 **Soe Sandar Win**
+
 - GitHub: [@githubhandle](https://github.com/soesandarwin2201)
 - Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
@@ -128,7 +129,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Alabi12/hello-react-front-end/issues).
+Feel free to check the [issues page](https://github.com/soesandarwin2201/house-renting-backend/issues).
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -140,7 +141,7 @@ If you like this project...give it a ⭐️!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Alabi12/hello-react-front-end/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/soesandarwin2201/house-renting-backend/blob/dev/LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
