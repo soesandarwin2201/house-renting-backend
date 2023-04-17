@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.1'
+ruby '3.1.3'
+
 gem 'rack-cors'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Use Json Web Token (JWT) for token based authentication
 gem 'jwt'
@@ -41,7 +43,8 @@ gem 'factory_bot_rails'
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

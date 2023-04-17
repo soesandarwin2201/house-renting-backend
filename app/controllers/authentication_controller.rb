@@ -4,6 +4,11 @@ class AuthenticationController < ApplicationController
   # post /auth/login
 
   def login
+<<<<<<< HEAD
+    user = User
+          .find_by(email: params["user"]["email"])
+          .try(:authenticate, params["user"]["password"])
+=======
     @user = User.find_by(login_params)
     if @user
       token = JsonWebToken.encode(user_id: @user.id)
@@ -14,8 +19,9 @@ class AuthenticationController < ApplicationController
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
   end
+>>>>>>> ae44f640657df42664d737ab5967687d07806a35
 
-  def login_params
-    params.permit(:email, :password)
   end
 end
+
+
