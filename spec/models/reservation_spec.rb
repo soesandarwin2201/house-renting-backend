@@ -3,9 +3,18 @@ require 'rails_helper'
 RSpec.describe Reservation do
   it 'should be valid' do
     reservation = Reservation.create(start_date: 'Date.today',
-                                     end_date: 'Date.tomorrow')
+                                     end_date: 'Date.tomorrow'
+                                    )
     expect(reservation). to_not be_valid
   end
+
+  it 'should have a start date' do
+    reservation.start_date = nil
+    expect(subject).to_not be_valid
+  end
+
+
+
 
   it 'should contain a start date' do
     user = User.create!(name: 'robert', email: '123@gmail.com', password: '123456')
