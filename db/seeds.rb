@@ -232,3 +232,4 @@ house20 = House.create!(
      bedroom_number: 2,
      user: admin
 )
+
