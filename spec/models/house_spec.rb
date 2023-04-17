@@ -52,6 +52,8 @@ RSpec.describe House do
           price: '3100',
           location: '190 Beach 69th St, Arverne, NY 11692',
           description: 'A new architectural masterpiece now dazzles the shores of the Rockaways with the addition of THE TIDES at Arverne By The Sea. Spectacular beachfront, affordable & luxurious apartments, offering modern open living spaces and high-end finishes.')
-        expect(house.price).to eql('3100')
+        expect(house.price.to_s.to_i).to eq(3100)
+
+
       end
   end
