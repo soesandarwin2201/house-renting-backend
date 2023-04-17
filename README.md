@@ -64,12 +64,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  https://github.com/Alabi12/hello-react-front-end.git
-```
-```
-  Rails backend
-
-   https://github.com/Alabi12/hello-rails-back-end.git
+  https://github.com/soesandarwin2201/house-renting-backend.git
 ```
 
 ### Install
