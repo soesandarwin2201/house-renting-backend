@@ -85,7 +85,7 @@ Example command:
 To run the project, execute the following command:
 
 ```sh
-  npm start
+  rails server
 ```
 
 ## 👥 Author <a name="authors"></a>
