@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Be sure to restart your server when you modify this file.
 
 # Avoid CORS issues when API is called from the frontend app.
@@ -11,3 +12,12 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
     end
   end
+=======
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+     allow do
+       origins 'localhost:3001' # Replace with your React app's URL
+       resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+     end
+   end
+   
+>>>>>>> ae44f640657df42664d737ab5967687d07806a35
