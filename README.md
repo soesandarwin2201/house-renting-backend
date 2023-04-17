@@ -75,10 +75,9 @@ Example command:
 
 ```sh
   cd my-project
-  npm install react react-dom
-  npm install react-router
-  npm install react-redux
-  npm install @reduxjs/toolkit
+  npm install rails
+  npm install ruby
+  npm bundle
 ```
 
 ### Usage
