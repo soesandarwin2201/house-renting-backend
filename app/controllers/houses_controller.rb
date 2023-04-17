@@ -9,6 +9,11 @@ class HousesController < ApplicationController
     render json: @houses
   end
 
+  def new
+    @houses = House.find(params[:id])
+    render json: @houses
+  end
+
   def create
     @house = current_user.houses.build(house_params)
     if @house.save
