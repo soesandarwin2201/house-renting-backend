@@ -10,7 +10,7 @@ class ApplicationController < ActionController::API
     begin
       @decoded = JsonWebToken.decode(header)
       @current_user = User.find(@decoded[:user_id])
-      if !@current_user.admin? && (params[:action] == "create" || params[:action] == "destroy")
+      if !@current_user.admin? && (params[:action] == 'create' || params[:action] == 'destroy')
         render json: { error: 'You are not authorized to perform this action' }, status: :unauthorized
       end
     rescue JWT::DecodeError => e
