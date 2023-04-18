@@ -98,27 +98,26 @@ To run the project, execute the following command:
 
 👤 **Soe Sandar Win**
 
-- GitHub: [@githubhandle](https://github.com/soesandarwin2201)
-- Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
+- GitHub: [@soesandarwin2201](https://github.com/soesandarwin2201)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/soe-sandar-win-softwareengineer/)
 
-👤 **Robert**
+👤 **ANYE PETER**
 
-- GitHub: [@githubhandle](https://github.com/Alabi12)
-- Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
+- GitHub: [@anyepeter](https://github.com/anyepeter)
+- Twitter: [@anyepeter](https://twitter.com/home?lang=en)
+- LinkedIn: [peterchendi](https://www.linkedin.com/feed/)
 
-👤 **Robert**
+👤 **Nabeel Akbar**
 
-- GitHub: [@githubhandle](https://github.com/Alabi12)
-- Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
+- GitHub: [@githubhandle](https://github.com/studiosnabeel)
+- Twitter: [@twitterhandle](https://twitter.com/StudiosNabeel)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/studiosnabeel/)
 
-👤 **Robert**
+👤 **Andy**
 
-- GitHub: [@githubhandle](https://github.com/Alabi12)
-- Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/robert-alabi/)
+- GitHub: [TechnoAndy](https://github.com/TechnoAndy)
+- Twitter: [@ADiegaardt](https://twitter.com/ADiegaardt)
+- LinkedIn: [andy-diegaardt](https://www.linkedin.com/in/andy-diegaardt/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
