@@ -1,0 +1,165 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/login":
+    post:
+      summary: login authentication
+      responses:
+        '200':
+          description: successful
+  "/addHouse":
+    get:
+      summary: new house
+      responses:
+        '200':
+          description: successful
+  "/houses":
+    get:
+      summary: list houses
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create house
+      responses:
+        '200':
+          description: successful
+  "/houses/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show house
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update house
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update house
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete house
+      responses:
+        '200':
+          description: successful
+  "/reservation":
+    post:
+      summary: create reservation
+      responses:
+        '200':
+          description: successful
+  "/houses/{house_id}/reservations":
+    parameters:
+    - name: house_id
+      in: path
+      description: house_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list reservations
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create reservation
+      responses:
+        '200':
+          description: successful
+  "/houses/{house_id}/reservations/{id}":
+    parameters:
+    - name: house_id
+      in: path
+      description: house_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show reservation
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update reservation
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update reservation
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete reservation
+      responses:
+        '200':
+          description: successful
+  "/signup":
+    post:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+  "/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+  "/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update user
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete user
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000
