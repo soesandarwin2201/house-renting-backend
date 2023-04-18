@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 resources :users 
   post "reservation", to: 'reservations#create'
+  get "reservation", to:'reservations#index'
   resources :houses do 
   resources :reservations 
   end
