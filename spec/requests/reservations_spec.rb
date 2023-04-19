@@ -1,12 +1,9 @@
 require 'swagger_helper'
 
 RSpec.describe 'reservations', type: :request do
-
   path '/reservation' do
-
     post('create reservation') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
