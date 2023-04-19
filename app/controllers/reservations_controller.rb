@@ -2,7 +2,7 @@ class ReservationsController < ApplicationController
   def index
     @reservations = Reservation.where(user_id: @current_user.id).includes(:house)
     @reservations = @reservations.map do |reservation|
-      { reservation:, image: reservation.house.image, name: reservation.house.name }
+      { reservation:reservation, image: reservation.house.image, name: reservation.house.name }
     end
     render json: @reservations
   end
