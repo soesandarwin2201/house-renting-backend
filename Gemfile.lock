@@ -255,7 +255,11 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
+<<<<<<< HEAD
    ruby 3.2.1p31
+=======
+   ruby 3.1.3p185
+>>>>>>> be36e8c (bundle install)
 
 BUNDLED WITH
    2.4.7
