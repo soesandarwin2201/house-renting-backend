@@ -19,7 +19,11 @@ default: &default
   encoding: unicode
   port: 5432
   username: postgres
+<<<<<<< HEAD
   password: koko23052020
+=======
+  password: nabeel
+>>>>>>> 6f7d94b (Add password)
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -29,7 +33,11 @@ development:
   database: house_renting_backend_development
   port: 5432
   username: postgres
+<<<<<<< HEAD
   password: koko23052020
+=======
+  password: nabeel
+>>>>>>> 6f7d94b (Add password)
 
 
 
@@ -68,7 +76,11 @@ test:
   database: house_renting_backend_test
   port: 5432
   username: postgres
+<<<<<<< HEAD
   password: koko23052020
+=======
+  password: nabeel
+>>>>>>> 6f7d94b (Add password)
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -95,4 +107,8 @@ production:
   database: house_renting_backend_production
   port: 5432
   username: postgres
+<<<<<<< HEAD
   password: koko23052020
+=======
+  password: nabeel
+>>>>>>> 6f7d94b (Add password)
