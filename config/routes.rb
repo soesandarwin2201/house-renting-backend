@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get '/addHouse', to: 'houses#new'
 
 resources :users 
-  post "reservation", to: 'reservations#create'
+  post "reservation", to: 'reservations#add'
+  get "reservation", to:'reservations#index'
   resources :houses do 
   resources :reservations 
   end

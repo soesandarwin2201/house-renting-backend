@@ -1,10 +1,13 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = current_user.reservations
+    @reservations = Reservation.where(user_id: @current_user.id).includes(:house)
+    @reservations = @reservations.map do |reservation|
+      { reservation:reservation, image: reservation.house.image, name: reservation.house.name }
+    end
     render json: @reservations
   end
 
-  def create
+  def add
     @reservations = if current_user.houses
                       current_user.reservations.build(
                         params.require(:reservation).permit(:start_date, :end_date)
