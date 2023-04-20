@@ -10,4 +10,7 @@ resources :users
   post "reservation", to: "reservations#add"
   get "reservation", to: "reservations#show"
   resources :houses do
+    resources :reservations, only: [:index] do
+      post :add, on: :collection
+    end
   end
