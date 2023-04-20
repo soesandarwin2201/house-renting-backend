@@ -9,3 +9,5 @@ Rails.application.routes.draw do
 resources :users  
   post "reservation", to: "reservations#add"
   get "reservation", to: "reservations#show"
+  resources :houses do
+  end
