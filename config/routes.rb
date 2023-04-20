@@ -14,3 +14,4 @@ resources :users
       post :add, on: :collection
     end
   end
+end
