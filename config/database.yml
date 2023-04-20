@@ -93,5 +93,4 @@ production:
   <<: *default
   database: house_renting_backend_production
   port: 5432
-  username: postgres
-  password: 8552
+  url: <%= ENV["DATABASE_URL"] %>
