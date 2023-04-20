@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   get '/addHouse', to: 'houses#new'
 
-resources :users  
+resources :users
   post "reservation", to: "reservations#add"
   get "reservation", to: "reservations#index"
   resources :houses do

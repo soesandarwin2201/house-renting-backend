@@ -41,8 +41,8 @@ RSpec.describe House do
                          with the addition of THE TIDES at Arverne By The Sea.Spectacular beachfront,affordable
                          & luxurious apartments, offering modern open living spaces and high-end finishes.')
     expect(house.description).to eql('A new architectural masterpiece now dazzles the shores of the Rockaways
-      with the addition of THE TIDES at Arverne By The Sea.Spectacular beachfront,affordable
-      & luxurious apartments, offering modern open living spaces and high-end finishes.')
+                         with the addition of THE TIDES at Arverne By The Sea.Spectacular beachfront,affordable
+                         & luxurious apartments, offering modern open living spaces and high-end finishes.')
   end
 
   it 'should have a image' do
