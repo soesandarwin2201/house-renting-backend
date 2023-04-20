@@ -22,7 +22,7 @@
 # 📖 House Renting! <a name="about-project"></a>
 
 ** House Renting!**
-The project you are going to build for the Final Capstone Project is based on an app to book an appointment to try a motorcycle. You should follow the given design of the website, but you must personalize the content, i.e., instead of booking an appointment to try a motorcycle, you can build an app to book an appointment with a doctor, or reserve an online class with a teacher. This is highly encouraged since having unique projects in your portfolio will help you stand out while looking for jobs.
+This is the Final Capstone Project is based on an app to book a rental home. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -86,6 +86,14 @@ To run the project, execute the following command:
 
 ```sh
   rails server
+```
+
+### Test
+
+To check the tests, execute the following command:
+
+```sh
+  rspec spec
 ```
 
 ## 👥 Author <a name="authors"></a>
