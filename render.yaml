@@ -1,7 +1,7 @@
 databases:
-  - name: house-renting-app
-    databaseName: house_renting_app
-    user: soesandarwin
+  - name: dpg-cko8jgk1tcps73dvanm0-a
+    databaseName: house_renting_app_wxga
+    user: house_renting_app_wxga_user
 
 services:
   - type: web
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: house-renting-app
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
